@@ -15,6 +15,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.xml.ws.soap.Addressing;
 import java.util.Date;
 import java.util.List;
@@ -115,7 +116,7 @@ public class MapperTests {
         count = messageMapper.selectLetterCount("111_112");
         System.out.println(count);
 
-         count = messageMapper.selectLetterUnreadCount(131, "111_131");
+         count = messageMapper.selectLetterUnreadCount(151, null);
         System.out.println(count);
     }
 }
